@@ -1,0 +1,22 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pandas = "*"
+numpy = "*"
+keras = "*"
+tensorflow = "*"
+myo-python = "*"
+keyboard = "*"
+matplotlib = "*"
+scikit-learn = "*"
+opencv-python = "*"
+pygame = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.12"
+python_full_version = "3.12.2"
