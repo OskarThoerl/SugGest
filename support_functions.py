@@ -1,3 +1,30 @@
+"""
+Data Preprocessing for LSTM Model Training by Oskar Thörl and Nadja Bobić
+
+This script handles all elements and interactions around the data preprocessing.
+It uses the pandas, numpy, and random libraries to preprocess the data and prepare it for training.
+
+The script contains several functions:
+The 'preprocess' function preprocesses one csv file. It loads the csv file,
+    assigns raw values to ‘X’, ‘y’ and ‘timestamps’, and transforms the data into multiple sets of a given size.
+    It also converts labels from letters to numbers and appends ‘X’ and ‘y’ to the global ‘X’ and ‘y’ variables
+    to combine all csv files in one dataset.
+The 'preprocess_all_data' function calls the preprocess function for all files in the given directories.
+    It ensures ‘X_full’ and ‘y_full’ are numpy arrays, prints their shape, and returns them.
+The 'train_test_val_split' function splits data into training, test, and validation groups.
+    It calculates the amount of test and validation sets, randomly assigns sets to test and validation groups,
+    assigns all sets to ‘X_train’ and ‘y_train’ and deletes all sets used by the test and validation group.
+    It converts all variables to numpy arrays, prints their shapes, and returns the groups.
+The 'LSTR_sequence_split' function splits data sets into smaller sets of a given length.
+    It loops through all sets, gets a singular gesture, loops through this gesture,
+    appends the first [look_back] e.g. 50 frames as a new sequence to ‘new_X’ and the appropriate label to ‘new_y’,
+    deletes the first frame, converts variables to numpy arrays, prints their shapes, and returns them.
+The remove_overflow function removes data overflow. It gets the number of sets and calculates overflow based on batch_size,
+    removes overflow if there is any, prints the shape of the new arrays, and returns them.
+
+The functions of this script are called in the model_training class.
+"""
+
 # Initialize Libraries
 import os
 import pandas as pd
@@ -179,27 +206,38 @@ def LSTR_sequence_split(X, y, look_back = 50):
 
     # Loop through all sets
     for i in range(len(X)):
+        # Get a singular gesture
         one_gesture = list(X[i])
+        # Loop through this gesture
         while len(one_gesture) >= look_back:
+            # Append first [look_back] e.g. 50 frames as a new sequence to new_X and the appropriate label to new_y
             new_X.append(one_gesture[:look_back])
             new_y.append(y[i])
+            # Delete the first frame
             try:
                 del one_gesture[0]
             except:
                 pass
+
+    # Convert variables to numpy arrays, print their shapes and return them
     new_X = np.array(new_X)
     new_y = np.array(new_y)
     print(new_X.shape, new_y.shape)
     return new_X, new_y
 
+# Function to remove data overflow
 def remove_overflow(X, y, batch_size):
-  num_samples = X.shape[0]
-  overflow = num_samples % batch_size
-  if overflow > 0:
-    shortened_X = X[:-overflow]
-    shortened_y = y[:-overflow]
-  else:
-    shortened_X = X
-    shortened_y = y
-  print(shortened_X.shape, shortened_y.shape)
-  return shortened_X, shortened_y
+    # Get number of sets and calculate overflow based on batch_size
+    num_samples = X.shape[0]
+    overflow = num_samples % batch_size
+
+    # Remove overflow if there is any
+    if overflow > 0:
+        shortened_X = X[:-overflow]
+        shortened_y = y[:-overflow]
+    else:
+        shortened_X = X
+        shortened_y = y
+    # Print the shape of the new arrays and return them
+    print(shortened_X.shape, shortened_y.shape)
+    return shortened_X, shortened_y

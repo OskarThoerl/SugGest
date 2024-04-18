@@ -4,41 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f2e4568-be7c-43ed-ac28-70ef6d490d32" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/SugGest.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data_recording.pyw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data_recordings/adr_r_1.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data_recordings/adr_r_10.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data_recordings/adr_r_2.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data_recordings/adr_r_3.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data_recordings/adr_r_4.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data_recordings/adr_r_5.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data_recordings/adr_r_6.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data_recordings/adr_r_7.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data_recordings/adr_r_8.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data_recordings/adr_r_9.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model_training.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run_program/100_set_model1.keras" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run_program/2_dense_model4.keras" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run_program/media/images/attention.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run_program/media/images/attention_f.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run_program/media/images/attention_m.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run_program/media/images/consume.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run_program/media/images/consume_f.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run_program/media/images/consume_m.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run_program/media/images/sleep.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run_program/media/images/sleep_f.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run_program/media/images/sleep_m.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run_program/model18.keras" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run_program/run_model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run_program/user_interface.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/support_functions.py" afterDir="false" />
+    <list default="true" id="9f2e4568-be7c-43ed-ac28-70ef6d490d32" name="Changes" comment="Finished Program">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_program/run_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_program/run_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/support_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/support_functions.py" afterDir="false" />
+    </list>
+    <list id="9cd63ed7-7b70-4912-8c6b-dfe0bb9501bc" name="Changes by bobic" comment="">
+      <change beforePath="$PROJECT_DIR$/data_recording.pyw" beforeDir="false" afterPath="$PROJECT_DIR$/data_recording.pyw" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +64,19 @@
       <option name="presentableId" value="Default" />
       <updated>1713453284943</updated>
     </task>
+    <task id="LOCAL-00001" summary="Finished Program">
+      <option name="closed" value="true" />
+      <created>1713479018699</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1713479018699</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Finished Program" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished Program" />
   </component>
 </project>
